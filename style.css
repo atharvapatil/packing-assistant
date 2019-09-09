@@ -2,6 +2,23 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
 canvas {
   display: block;
+}
+
+.modelStatus {
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.resultText{
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 800;
 }
