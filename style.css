@@ -56,11 +56,11 @@ canvas {
 
 .grid-container {
   display: grid;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
   margin: auto;
   margin-left: 4px;
-  /* padding-top: 56px;  */
+  padding-top: 32px;
   width: 80%;
   grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
   justify-content: flex-start;
@@ -68,12 +68,12 @@ canvas {
 
 .objectList {
   width: 330px;
-  ;
   height: 90px;
-  margin: 24px;
-  /* margin-bottom: 8px; */
+  margin-left: 8px;
+  margin-bottom: 8px;
   background: linear-gradient(120deg, #cfd8dc 0%, #90a4ae 100%);
   border-radius: 4px;
+  transition: 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .objectList p {
@@ -88,11 +88,11 @@ canvas {
 .objectIdentified {
   width: 330px;
   height: 90px;
-  margin: 24px;
+  margin-left: 8px;
   margin-bottom: 8px;
   border-radius: 4px;
   background: linear-gradient(to right, #c33764, #1d2671);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .objectIdentified p {

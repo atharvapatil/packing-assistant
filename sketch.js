@@ -59,11 +59,11 @@ function setup() {
   itemSeven = document.getElementById('item-seven');
   itemSeven.classList.add('objectList');
 
-  // itemEight = document.getElementById('item-eight');
-  // itemEight.classList.add('objectList');
-  //
-  // itemNine = document.getElementById('item-nine');
-  // itemNine.classList.add('objectList');
+  itemEight = document.getElementById('item-eight');
+  itemEight.classList.add('objectList');
+
+  itemNine = document.getElementById('item-nine');
+  itemNine.classList.add('objectList');
 }
 
 function gotResults(err, results) {
@@ -89,18 +89,18 @@ function gotResults(err, results) {
     if (detectedObj === 'backpack, back pack, knapsack, packsack, rucksack, haversack' || 'mailbag, postbag') {
       itemFive.classList.add('objectIdentified');
     }
-    if (detectedObj === 'Loafer') {
+    if (detectedObj === 'Loafer' || 'running shoe') {
       itemSix.classList.add('objectIdentified');
     }
-    if (detectedObj === 'paintbrush') {
+    if (detectedObj === 'soccer ball') {
       itemSeven.classList.add('objectIdentified');
     }
-    // if (detectedObj === 'cat') {
-    //   itemEight.classList.add('objectIdentified');
-    // }
-    // if (detectedObj === 'dsed') {
-    //   itemNine.classList.add('objectIdentified');
-    // }
+    if (detectedObj === 'toilet tissue, toilet paper, bathroom tissue') {
+      itemEight.classList.add('objectIdentified');
+    }
+    if (detectedObj === 'bow tie, bow-tie, bowtie') {
+      itemNine.classList.add('objectIdentified');
+    }
   }
 
   setTimeout(function() {
