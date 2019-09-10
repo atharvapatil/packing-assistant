@@ -76,21 +76,21 @@ function gotResults(err, results) {
     // console.log(detectedObj);
     if (detectedObj === 'beer glass' || 'measuring cup') {
       itemOne.classList.add('objectIdentified');
-    } else if (detectedObj === 'sunglasses, dark glasses, shades' || 'sunglass') {
+    }  if (detectedObj === 'sunglasses, dark glasses, shades' || 'sunglass') {
       itemTwo.classList.add('objectIdentified');
-    } else if (detectedObj === 'sweatshirt') {
+    }  if (detectedObj === 'sweatshirt') {
       itemThree.classList.add('objectIdentified');
-    } else if (detectedObj === 'remote control, remote' || 'reflex camera' || 'cellular telephone, cellular phone, cellphone, cell, mobile phone') {
+    }  if (detectedObj === 'remote control, remote' || 'reflex camera' || 'cellular telephone, cellular phone, cellphone, cell, mobile phone') {
       itemFour.classList.add('objectIdentified');
-    } else if (detectedObj === 'backpack, back pack, knapsack, packsack, rucksack, haversack' || 'mailbag, postbag') {
+    }  if (detectedObj === 'backpack, back pack, knapsack, packsack, rucksack, haversack' || 'mailbag, postbag') {
       itemFive.classList.add('objectIdentified');
-    } else if (detectedObj === 'Loafer' || 'running shoe') {
+    }  if (detectedObj === 'Loafer' || 'running shoe') {
       itemSix.classList.add('objectIdentified');
-    } else if (detectedObj === 'soccer ball') {
+    }  if (detectedObj === 'soccer ball') {
       itemSeven.classList.add('objectIdentified');
-    } else if (detectedObj === 'toilet tissue, toilet paper, bathroom tissue') {
+    }  if (detectedObj === 'toilet tissue, toilet paper, bathroom tissue') {
       itemEight.classList.add('objectIdentified');
-    } else if (detectedObj === 'bow tie, bow-tie, bowtie') {
+    }  if (detectedObj === 'bow tie, bow-tie, bowtie') {
       itemNine.classList.add('objectIdentified');
     }
   }
