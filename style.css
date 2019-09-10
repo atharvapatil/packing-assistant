@@ -1,10 +1,40 @@
 html, body {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
+  /* background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%); */
+  display: block;
+  background-color: #fafafa;
 }
 
 canvas {
   display: block;
+}
+
+.header {
+  background-color: white;
+  margin: 0px;
+  padding: 0px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-family: 'Roboto Mono', monospace;
+  text-align: left;
+  margin: 0px;
+  color: #790e8b;
+  padding: 24px 24px 8px 24px;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.header p {
+  font-family: 'Roboto Mono', monospace;
+  text-align: left;
+  margin: 0px;
+  color: #9c27b0;
+  padding: 8px 24px 24px 24px;
+  font-size: 20px;
+  font-weight: 800;
 }
 
 .modelStatus {
@@ -15,10 +45,48 @@ canvas {
   font-weight: 800;
 }
 
-.resultText{
+.resultText {
   font-family: 'Noto Sans', sans-serif;
   text-align: center;
   margin-top: 20px;
   font-size: 20px;
   font-weight: 800;
+}
+
+.objectList {
+  width: 30%;
+  height: 90px;
+  margin: 24px;
+  margin-bottom: 8px;
+  background: linear-gradient(120deg, #cfd8dc 0%, #90a4ae 100%);
+  border-radius: 4px;
+}
+
+.objectList p {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 24px;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.objectIdentified {
+  width: 30%;
+  height: 90px;
+  margin: 24px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  background: linear-gradient(to right, #c33764, #1d2671);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.objectIdentified p {
+  font-family: 'Roboto Mono', monospace;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
