@@ -68,12 +68,12 @@ function setup() {
 
 function gotResults(err, results) {
 
-  // console.log("The machine is seeing", results);
+  console.log("The machine is seeing", results);
   resultText.innerHTML = "The camera thinks this is : " + results[0].label;
 
   if (results) {
     detectedObj = results[0].label;
-    console.log(detectedObj);
+    // console.log(detectedObj);
     if (detectedObj === 'beer glass' || 'measuring cup') {
       itemOne.classList.add('objectIdentified');
     } else if (detectedObj === 'sunglasses, dark glasses, shades' || 'sunglass') {
@@ -90,14 +90,14 @@ function gotResults(err, results) {
       itemSeven.classList.add('objectIdentified');
     } else if (detectedObj === 'toilet tissue, toilet paper, bathroom tissue') {
       itemEight.classList.add('objectIdentified');
-    }else if (detectedObj === 'bow tie, bow-tie, bowtie') {
+    } else if (detectedObj === 'bow tie, bow-tie, bowtie') {
       itemNine.classList.add('objectIdentified');
     }
   }
 
   setTimeout(function() {
     myMobileNet.classify(myVideo, gotResults);
-  }, 1500);
+  }, 2000);
 
 }
 
