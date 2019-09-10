@@ -5,6 +5,8 @@ let resultText;
 let canvas;
 let detectedObj;
 let itemOne, itemTwo, itemThree;
+let itemFour, itemFive, itemSix;
+let itemSeven, itemEight, itemNine;
 
 // Loading the MobileNet model before doing anything else
 function preload() {
@@ -12,11 +14,11 @@ function preload() {
 
   modelStatus = document.getElementById('model-status');
   modelStatus.classList.add('modelStatus');
-  modelStatus.innerHTML = "Please wait: Loading Model";
+  // modelStatus.innerHTML = "Please wait: Loading Model";
 
   resultText = document.getElementById('model-results');
   resultText.classList.add('resultText');
-  resultText.innerHTML = "waiting for results";
+  resultText.innerHTML = "Getting ready to help you";
 }
 
 
@@ -34,7 +36,7 @@ function setup() {
 
   myMobileNet.classify(myVideo, gotResults);
 
-  modelStatus.innerHTML = "Model Loaded";
+  // modelStatus.innerHTML = "Model Loaded";
 
   itemOne = document.getElementById('item-one');
   itemOne.classList.add('objectList');
@@ -44,28 +46,66 @@ function setup() {
 
   itemThree = document.getElementById('item-three');
   itemThree.classList.add('objectList');
+
+  itemFour = document.getElementById('item-four');
+  itemFour.classList.add('objectList');
+
+  itemFive = document.getElementById('item-five');
+  itemFive.classList.add('objectList');
+
+  itemSix = document.getElementById('item-six');
+  itemSix.classList.add('objectList');
+
+  itemSeven = document.getElementById('item-seven');
+  itemSeven.classList.add('objectList');
+
+  // itemEight = document.getElementById('item-eight');
+  // itemEight.classList.add('objectList');
+  //
+  // itemNine = document.getElementById('item-nine');
+  // itemNine.classList.add('objectList');
 }
 
 function gotResults(err, results) {
 
   // console.log("The machine is seeing", results);
-  resultText.innerHTML = results[0].label;
+  resultText.innerHTML = "The camera thinks this is : " + results[0].label;
 
   if (results) {
     detectedObj = results[0].label;
     console.log(detectedObj);
-    if (detectedObj === 'beer glass') {
+    if (detectedObj === 'beer glass' || 'measuring cup') {
       itemOne.classList.add('objectIdentified');
-    } else if (detectedObj === 'sweatshirt') {
-      itemThree.classList.add('objectIdentified');
-    } else if (detectedObj === 'sunglasses, dark glasses, shades') {
+    }
+    if (detectedObj === 'sunglasses, dark glasses, shades' || 'sunglass') {
       itemTwo.classList.add('objectIdentified');
     }
+    if (detectedObj === 'sweatshirt') {
+      itemThree.classList.add('objectIdentified');
+    }
+    if (detectedObj === 'remote control, remote' || 'reflex camera' || 'cellular telephone, cellular phone, cellphone, cell, mobile phone') {
+      itemFour.classList.add('objectIdentified');
+    }
+    if (detectedObj === 'backpack, back pack, knapsack, packsack, rucksack, haversack' || 'mailbag, postbag') {
+      itemFive.classList.add('objectIdentified');
+    }
+    if (detectedObj === 'Loafer') {
+      itemSix.classList.add('objectIdentified');
+    }
+    if (detectedObj === 'paintbrush') {
+      itemSeven.classList.add('objectIdentified');
+    }
+    // if (detectedObj === 'cat') {
+    //   itemEight.classList.add('objectIdentified');
+    // }
+    // if (detectedObj === 'dsed') {
+    //   itemNine.classList.add('objectIdentified');
+    // }
   }
 
   setTimeout(function() {
     myMobileNet.classify(myVideo, gotResults);
-  }, 1000);
+  }, 2000);
 
 }
 

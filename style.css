@@ -38,7 +38,7 @@ canvas {
 }
 
 .modelStatus {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Roboto Slab', serif;
   text-align: center;
   margin-top: 30px;
   font-size: 28px;
@@ -46,18 +46,32 @@ canvas {
 }
 
 .resultText {
-  font-family: 'Noto Sans', sans-serif;
-  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  text-align: left;
+  margin-left: 24px;
   margin-top: 20px;
   font-size: 20px;
   font-weight: 800;
 }
 
+.grid-container {
+  display: grid;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: auto;
+  margin-left: 4px;
+  /* padding-top: 56px;  */
+  width: 80%;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  justify-content: flex-start;
+}
+
 .objectList {
-  width: 30%;
+  width: 330px;
+  ;
   height: 90px;
   margin: 24px;
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
   background: linear-gradient(120deg, #cfd8dc 0%, #90a4ae 100%);
   border-radius: 4px;
 }
@@ -67,12 +81,12 @@ canvas {
   font-size: 24px;
   text-align: center;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 10%;
+  /* transform: translateY(-50%); */
 }
 
 .objectIdentified {
-  width: 30%;
+  width: 330px;
   height: 90px;
   margin: 24px;
   margin-bottom: 8px;
@@ -87,6 +101,6 @@ canvas {
   font-size: 24px;
   text-align: center;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 10%;
+  /* transform: translateY(-50%); */
 }
