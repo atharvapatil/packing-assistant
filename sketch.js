@@ -68,36 +68,36 @@ function setup() {
 
 function gotResults(err, results) {
 
-  console.log("The machine is seeing", results);
+  // console.log("The machine is seeing", results);
   resultText.innerHTML = "The camera thinks this is : " + results[0].label;
 
   if (results) {
     detectedObj = results[0].label;
-    // console.log(detectedObj);
+    console.log(detectedObj);
     if (detectedObj === 'beer glass' || 'measuring cup') {
       itemOne.classList.add('objectIdentified');
-    }  if (detectedObj === 'sunglasses, dark glasses, shades' || 'sunglass') {
+    } else if (detectedObj === 'sunglasses, dark glasses, shades' || 'sunglass') {
       itemTwo.classList.add('objectIdentified');
-    }  if (detectedObj === 'sweatshirt') {
+    } else if (detectedObj === 'sweatshirt') {
       itemThree.classList.add('objectIdentified');
-    }  if (detectedObj === 'remote control, remote' || 'reflex camera' || 'cellular telephone, cellular phone, cellphone, cell, mobile phone') {
+    } else if (detectedObj === 'remote control, remote' || 'reflex camera' || 'cellular telephone, cellular phone, cellphone, cell, mobile phone') {
       itemFour.classList.add('objectIdentified');
-    }  if (detectedObj === 'backpack, back pack, knapsack, packsack, rucksack, haversack' || 'mailbag, postbag') {
+    } else if (detectedObj === 'backpack, back pack, knapsack, packsack, rucksack, haversack' || 'mailbag, postbag') {
       itemFive.classList.add('objectIdentified');
-    }  if (detectedObj === 'Loafer' || 'running shoe') {
+    } else if (detectedObj === 'Loafer' || 'running shoe') {
       itemSix.classList.add('objectIdentified');
-    }  if (detectedObj === 'soccer ball') {
+    } else if (detectedObj === 'soccer ball') {
       itemSeven.classList.add('objectIdentified');
-    }  if (detectedObj === 'toilet tissue, toilet paper, bathroom tissue') {
+    } else if (detectedObj === 'toilet tissue, toilet paper, bathroom tissue') {
       itemEight.classList.add('objectIdentified');
-    }  if (detectedObj === 'bow tie, bow-tie, bowtie') {
+    } else if (detectedObj === 'bow tie, bow-tie, bowtie') {
       itemNine.classList.add('objectIdentified');
     }
   }
 
   setTimeout(function() {
     myMobileNet.classify(myVideo, gotResults);
-  }, 2000);
+  }, 1000);
 
 }
 
